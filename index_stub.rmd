@@ -28,7 +28,7 @@ knitr::opts_chunk$set(error=TRUE)
 address <- "San Francisco, CA"
 ```
 
-```{r}
+```{r processData}
 ## Make the main computations here.  Keep the functions in a separate file(s)
 ## and only include the final operations here.
 ## You have to 'source()' your main R file(s) here:

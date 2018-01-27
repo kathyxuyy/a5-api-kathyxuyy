@@ -5,8 +5,9 @@ You task is to display some information about elected officials,
 representing a given US address.  The report should be written in
 R-markdown, and given a valid address, it should compile to an html
 file that includes the federal, state, and county level
-representatives, and summary information about the state's members of
-the House of Representatives.  The final report markdown file should
+representatives (meaning sense "representing you"), and summary
+information about the state's Representatives (meaning "members of
+the [House of Representatives](https://en.wikipedia.org/wiki/United_States_House_of_Representatives)").  The final report markdown file should
 compile for different addresses: if you pick an address in any state
 and recompile, it will show the representatives for that address.
 
