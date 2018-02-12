@@ -30,13 +30,7 @@ representatives <- fromJSON(content(response, "text"))
 ##    https://info201.github.io/dplyr.html#joins
 ##    http://r4ds.had.co.nz/relational-data.html
 
-names <- representatives$officials$name[1:20]
-party <- representatives$officials$party[1:20]
-photo <- representatives$officials$photoUrl[1:20]
-phones <- representatives$officials$phones[1:20]
-emails <- representatives$officials$emails[1:20]
-personal.url <- representatives$officials$urls[1:20]
-position <- representatives$offices$name[1:20]
+
 
 ## 3. transform the data into a well formatted table
 ##    I recommend you transform the data into markdown strings.  For instance,

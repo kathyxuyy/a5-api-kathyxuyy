@@ -91,7 +91,6 @@ member.data$first_name[1]
 member.data$last_name[1]
 member.data$gender[1]
 member.data$party[1]
-member.data$d
 member.data$twitter_id[1]
 
 

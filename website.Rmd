@@ -90,6 +90,12 @@ Susan.vote <- flatten(data.frame(Susan$results$votes))
 total.yes <- Susan.vote$total.yes[1]
 persons <- Susan.vote$total.no[1] + Susan.vote$total.yes[1] +Susan.vote$total.not_voting[1]
 percent <- paste0(round(total.yes*100/persons, 0),"%" )
+
+base.uri <- "https://api.propublica.org/congress/v1/members/D000617.json"
+response <- GET(base.uri, add_headers('X-API-Key' = propublic.key))
+Susan.body <- fromJSON(content(response, "text"))
+birth <- flatten(data.frame(Susan.body$results))
+Susan.birth <- birth$date_of_birth ## got the age from here
 ```
 
 ```{r echo= FALSE}
