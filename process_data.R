@@ -14,6 +14,14 @@
 ##    address bar.  If correct, it will display the corresponding JSON data.  If
 ##    incorrect, you get an error message.
 
+this.address <- "Bellevue, WA"
+base.uri <- "https://www.googleapis.com/civicinfo/v2/representatives"
+query.params = list(address = this.address, key = google.key)
+response <- GET(base.uri, query = query.params)
+representatives <- fromJSON(content(response, "text"))
+
+
+
 ## 2. extract the elected officials' data from the result
 ##    The data contains many relevant variables, including normalized address,
 ##    'offices' and 'officials'.  In order to attach the officials (people)
@@ -21,6 +29,14 @@
 ##    More about joins in
 ##    https://info201.github.io/dplyr.html#joins
 ##    http://r4ds.had.co.nz/relational-data.html
+
+names <- representatives$officials$name[1:20]
+party <- representatives$officials$party[1:20]
+photo <- representatives$officials$photoUrl[1:20]
+phones <- representatives$officials$phones[1:20]
+emails <- representatives$officials$emails[1:20]
+personal.url <- representatives$officials$urls[1:20]
+position <- representatives$offices$name[1:20]
 
 ## 3. transform the data into a well formatted table
 ##    I recommend you transform the data into markdown strings.  For instance,
